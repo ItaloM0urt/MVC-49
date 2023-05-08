@@ -31,7 +31,7 @@ class IndexController extends Action
 
     public function login()
     {  
-        $this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
+        $this->view->login = isset($_GET['error']) ? $_GET['error'] : '';
         $this->render('login', "template_front2");
     }
 

@@ -21,11 +21,32 @@
                     <a href="#">Criar conta</a>
                 </div>
 
-                <?php if ($this->view->login == 'erro') { ?>
-                    <div class="row mt-3">
-                        <span class="text text-danger">*E-mail e ou senha inválido(s)</span>
-                    </div>
+               
+
+
+                <?php if ($this->view->login == 401) { ?>
+                    <script>
+                        swal({
+                            title: "Error!",
+                            text: "E-mail ou senha inválido!",
+                            icon: "error",
+                            button: "Ok",
+                            });
+                    </script>
                 <?php } ?>
+
+                <?php if ($this->view->login == 403) { ?>
+                    <script>
+                        swal({
+                            title: "Error!",
+                            text: "Acesso negado",
+                            icon: "error",
+                            button: "Ok",
+                            });
+                    </script>
+                <?php } ?>
+
+
             </form>
         </div>
     </div>

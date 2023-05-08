@@ -26,6 +26,17 @@
             //rotas do AuthController
             $routes['autenticar'] = array('route'=>'/autenticar', 'controller' => 'AuthController', 'action' => 'autenticar');
 
+            $routes['sair'] = array('route'=>'/sair', 'controller' => 'AuthController', 'action' => 'sair');
+
+            //rotas do AdminController
+            $routes['admin'] =  array('route'=>'/admin','controller'=>'adminController','action'=>'index');
+            
+
+            //rotas do UsuarioController
+            $routes['usuario_novo'] =  array('route'=>'/usuario_novo','controller'=>'usuarioController','action'=>'cadastrar');
+
+            $routes['salvar_usuario'] =  array('route'=>'/salvar_usuario','controller'=>'usuarioController','action'=>'salvar_usuario');
+            
 
             $this->setRoutes($routes);
         }
